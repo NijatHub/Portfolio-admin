@@ -623,15 +623,17 @@ span {
 }
 
 @media(max-width: 895px) {
+
     #menu-icon {
         display: block;
     }
+
     .navbar {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 50%;
-        padding: 1rem 3%;
+        width: 60%;
+        padding: 1rem 5%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         border-top-left-radius: 2rem;
@@ -639,65 +641,98 @@ span {
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
+
     .navbar.active {
         display: block;
     }
+
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
         color: white;
     }
+
+    /* FIX: CENTERING & REMOVE HUGE SIDE MARGINS */
     .home {
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        padding: 8rem 5% 5rem;
+        margin: 0;                  /* FIX */
         gap: 3rem;
     }
+
     .home-content {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
     }
+
     .home-content h3 {
         font-size: 2.6rem;
     }
+
     .home-content h1 {
-        font-size: 8rem;
-        margin-top: 3rem;
+        font-size: 6rem;            /* FIX: too big before */
+        margin-top: 2rem;
     }
+
     .home-content p {
-        max-width: 600px;
+        max-width: 100%;
         margin: 0 auto;
     }
+
     .home-img img {
-        width: 56vw;
-        margin: 3rem 0;
+        width: 70vw;
+        margin: 2rem 0;
     }
+
+    /* ABOUT */
     .about {
         flex-direction: column-reverse;
-        padding: 10rem 9% 10rem;
+        padding: 8rem 5% 5rem;
+        text-align: center;
     }
+
+    .about img {
+        width: 70vw;
+    }
+
     .about .heading {
         margin: 3rem 0;
     }
-    .about img {
-        width: 50vw;
-    }
+
+    /* SERVICES */
     .services h2 {
         margin-bottom: 3rem;
     }
+
     .services-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
+
+    /* FIX: CENTER RED CARDS */
+    .service-box {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+    }
+
+    /* PROJECTS */
     .projects-box {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0 auto;
     }
+
+    /* FIX: REMOVE OVERFLOW */
     .projects-box img {
-        min-width: 42rem;
+        width: 70%;
+        min-width: 0;
+        margin: 0 auto;
+        display: block;
     }
 }
+
+
 .thankyou {
     display: flex;
     flex-direction: column;
@@ -847,7 +882,7 @@ span {
     margin-top: 10px;
 }
 
-.admin-back-btn {
+.admin-back-button {
     display: block;
     width: 100%;
     text-align: center;
@@ -865,7 +900,7 @@ span {
     box-shadow: 0 0 15px rgba(255,0,0,0.3);
 }
 
-.admin-back-btn:hover {
+.admin-back-button:hover {
     background: var(--main-color);
     color: black;
     transform: scale(1.05);
